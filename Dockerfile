@@ -21,7 +21,7 @@ env    DEBIAN_FRONTEND noninteractive
 # Download and install everything from the repos.
 add    ./apt/sources.list /etc/apt/sources.list
 run    apt-get --yes update; apt-get --yes upgrade
-run	   apt-get --yes install curl openjdk-7-jre-headless supervisor
+run    apt-get --yes install curl openjdk-7-jre-headless supervisor
 
 
 
@@ -35,7 +35,7 @@ add    ./scripts/start /start
 
 
 # Fix all permissions
-run	   chmod +x /start
+run    chmod +x /start
 
 
 # 80 is for nginx web, /data contains static files and database /start runs it.
