@@ -4,14 +4,14 @@
 # Builds a basic docker image that can run a Minecraft server
 # (http://minecraft.net/).
 #
-# Authors: Isaac Bythewood
-# Updated: Oct 21st, 2014
+# Authors: Isaac Bythewood, Paul Rosania
+# Updated: Apr 28th, 2014
 # Require: Docker (http://www.docker.io/)
 # -----------------------------------------------------------------------------
 
 
 # Base system is the LTS version of Ubuntu.
-from   ubuntu:13.10
+from   ubuntu:14.04
 
 
 # Make sure we don't get notifications we can't answer during building.
