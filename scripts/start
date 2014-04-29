@@ -2,15 +2,15 @@
 # -----------------------------------------------------------------------------
 # docker-minecraft /start script
 #
-# Authors: Isaac Bythewood
-# Updated: Mar 31st, 2014
+# Authors: Isaac Bythewood, Paul Rosania
+# Updated: Apr 28th, 2014
 # -----------------------------------------------------------------------------
 
 
 # Copy over the base database to our data directory if it doesn't exist
-if [ ! -f /data/minecraft_server.jar ]
+if [ ! -f /srv/minecraft/minecraft_server.jar ]
 then
-    cd /data
+    cd /srv/minecraft
     cp /usr/local/etc/minecraft/ops.txt .
     cp /usr/local/etc/minecraft/white-list.txt .
     cp /usr/local/etc/minecraft/server.properties .
@@ -18,6 +18,6 @@ then
 fi
 
 
-# Run supervisor which maintains the mumble server
+# Run supervisor which maintains the minecraft server
 /usr/bin/supervisord
 
