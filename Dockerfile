@@ -5,13 +5,13 @@
 # (http://minecraft.net/).
 #
 # Authors: Isaac Bythewood, Paul Rosania
-# Updated: Apr 28th, 2014
+# Updated: Oct 6th, 2017
 # Require: Docker (http://www.docker.io/)
 # -----------------------------------------------------------------------------
 
 
 # Base system is the LTS version of Ubuntu.
-from   ubuntu:14.04
+from   ubuntu:16.04
 
 
 # Make sure we don't get notifications we can't answer during building.
@@ -21,7 +21,7 @@ env    DEBIAN_FRONTEND noninteractive
 # Download and install everything from the repos.
 add    ./apt/sources.list /etc/apt/sources.list
 run    apt-get --yes update; apt-get --yes upgrade
-run    apt-get --yes install curl openjdk-7-jre-headless supervisor
+run    apt-get --yes install curl openjdk-8-jre-headless supervisor
 
 
 
